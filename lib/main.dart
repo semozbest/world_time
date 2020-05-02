@@ -5,7 +5,7 @@ import 'package:worldtime/pages/Loading.dart';
 import 'package:worldtime/pages/ninja_card.dart';
 
 void main() => runApp(MaterialApp(
-    initialRoute: '/home',
+    initialRoute: '/',
         routes: {
             '/':(context) =>Loading(),
             '/home':(context)=>Home(),
