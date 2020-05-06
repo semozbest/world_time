@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart';
 import 'dart:convert';
 import 'package:intl/intl.dart';
@@ -8,12 +9,13 @@ class WorldTime{
   String url;   //location url
   bool isDayTime;
 
-  WorldTime({this.location,this.flag,this.url});
+  WorldTime({this.url,this.location,this.flag});
 
   Future<void> getTime() async {
     try{
       Response response= await get('http://worldtimeapi.org/api/timezone/$url');
       Map data=jsonDecode(response.body);
+
 
       //get properties from the data
       String datetime=data['datetime'];
