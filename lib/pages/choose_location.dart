@@ -16,7 +16,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
     WorldTime(url: 'Asia/Jakarta',location:'Jakarta',flag: 'https://www.countryflags.io/ID/flat/64.png' ),
   ];
 
-  void updateTime(index)async {
+  void updateTime(index) async {
     WorldTime instance=locations[index];
     await instance.getTime();
     //navigate to home screen and pass it to home screen
@@ -43,7 +43,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
         itemBuilder: (context,index){
           return Card(
             child:ListTile(
-              onTap: (){
+              onTap: () {
                 updateTime(index);
               },
               title: Text(locations[index].location),
